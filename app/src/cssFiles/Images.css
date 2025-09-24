@@ -1,0 +1,131 @@
+.input{
+  field-sizing: fixed;
+  background-color: #282c34;
+  border: none;
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  padding: 1em;
+  color: rgba(255, 255, 255, 0.837);
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+  align-items: center;
+  width: 20%;
+  justify-content: flex-start;
+}
+
+.input::placeholder{
+  color:white;
+}
+
+.container{
+  display: flex;
+  width: 100vw;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  background-color: #282c34;
+}
+
+.cat-img {
+  height: 30vmin;
+  position: relative;
+  top: -50px;
+  pointer-events: none;
+}
+
+.cat-text {
+  color: white;
+  animation: colorChange 5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+.jokeText {
+  font-size: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.jokeBox{
+  border: #0e1c37 2px solid;
+  width: 20vh;
+}
+
+.jokeBoxBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: #000000 5px solid;
+  width: auto;
+}
+
+.page-content {
+  padding-top: 240px;
+  width:100%;
+}
+
+.leBronImage {
+  height: 35vmin;
+  position: relative;
+}
+
+.leBronText {
+  font-size: 24px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+@keyframes catImgSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes leBronImage-move {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+
+@keyframes colorChange {
+  0%, 16% {
+    color: blue;
+  }
+  17%, 33% {
+    color: green;
+  }
+  34%, 50% {
+    color: yellow;
+  }
+  51%, 66% {
+    color: orange;
+  }
+  67%, 83% {
+    color: red;
+  }
+  84%, 100% {
+    color: purple;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .leBronImage {
+    animation: leBronImage-move infinite 2s alternate linear;
+  }
+  .cat-img {
+    animation: catImgSpin infinite 20s linear;
+  }
+}
