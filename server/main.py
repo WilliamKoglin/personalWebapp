@@ -1,5 +1,4 @@
 from app.core.application import app
-from app.api import ben_endpoints
 from app.api import will_endpoints
 
 
@@ -17,7 +16,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(ben_endpoints.router, prefix="/ben")
 app.include_router(will_endpoints.router, prefix="/will")
     
 @app.get("/")
