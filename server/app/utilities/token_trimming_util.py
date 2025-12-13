@@ -1,7 +1,7 @@
 import tiktoken
 from typing import List, Dict
 
-encoding = tiktoken.encoding_for_model("gpt-4o-mini")
+encoding = tiktoken.get_encoding("cl100k_base")
 
 def count_tokens(text: str) -> int:
     return len(encoding.encode(text))
