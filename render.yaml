@@ -1,0 +1,14 @@
+services:
+
+  - name: personalwebapp-backend
+    type: web
+    runtime: python
+    rootDir: server
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+
+  - name: personalwebapp-frontend
+    type: static
+    rootDir: app
+    buildCommand: "npm install && npm run build"
+    publishDir: build

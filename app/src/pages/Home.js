@@ -7,10 +7,7 @@ function Home() {
 return (
   <div className="Home">
     <div className="home-header">
-        <div className="home-header-left">
-            <img className='home-image' src='./assets/image0.jpg' alt='Bejamin Wang'></img>
-        </div>
-
+        
         <div className='home-header-middle'>
             <h1>Welcome to the Home Page</h1>
             <p>This is the home page of our application.</p>
@@ -24,7 +21,7 @@ return (
 
     <div className='about-box'>
       <h4>About This Project</h4>
-      <p>This website was made by two interns, Benjamin Wang and William Koglin, during the summer of their junior year of high school.</p>
+      <p>This website was made by an intern William Koglin, during the summer of his junior year of high school. This website contains his first attempt at putting elements on a website, his first experience at api calling, and his first interaction with putting guidelines on an AI model.</p>
     </div>
 
     
