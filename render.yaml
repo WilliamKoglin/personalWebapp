@@ -1,20 +1,14 @@
 services:
-  - name: backend
+
+  - name: personalwebapp-backend
     type: web
     runtime: python
+    rootDir: server
     buildCommand: "pip install -r requirements.txt"
     startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
-    envVars:
-      - key: PYTHON_VERSION
-        value: "3.10"
 
-  - name: frontend
-    type: web
-    runtime: node
-    region: oregon
-    buildCommand: "npm install && npm run build"
-    startCommand: "npm run start"
+  - name: personalwebapp-frontend
+    type: static
     rootDir: app
-    envVars:
-      - key: NODE_ENV
-        value: production
+    buildCommand: "npm install && npm run build"
+    publishDir: build
